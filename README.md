@@ -37,7 +37,7 @@ Since there is a constant deployment of the same AWS resources, this terraform p
    key_name = "PASTE-YOUR-KEY-NAME-HERE"
   
 3) Open `script.sh` located in `/modules/ec2-module/public-instances` 
-4) Paste key pairs content here and modify your key_name in the route with the name of your key pairs:
+4) Paste key content there and modify the route with your key name:
    ```bash
    echo "PASTE YOUR .PEM CONTENT HERE"> /home/ubuntu/key_name.pem 
 
@@ -59,7 +59,8 @@ Finally Save!
 10) Finally check your `target group` Health from your server instances
 11) Once finished, rember delete aws resources to avoid charges:
      ```bash
-   terraform destroy
+    terraform destroy
 
  # About this project
 Be free to explore each scenario, keep improving! 🕵️
+DON'T SHARE YOUR KEY PAIRS FILE OR CONTENT!!!! ⚠️
