@@ -62,5 +62,5 @@ Finally Save!
     terraform destroy
 
  # About this project
-Be free to explore each scenario, keep improving! 🕵️
-DON'T SHARE YOUR KEY PAIRS FILE OR CONTENT!!!! ⚠️
+Be free to explore each scenario, keep improving! 🕵️  
+THIS IS A TEST, DON'T SHARE YOUR KEY PAIRS FILE OR CONTENT!!!! ⚠️
