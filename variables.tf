@@ -13,7 +13,6 @@ variable "instance_type" {
 }
 variable "key_name" {
   type    = string
-  default = "ECT-DEFAULT"
 }
 variable "ssh_cidr" {
   type    = list(string)

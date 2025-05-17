@@ -41,6 +41,7 @@ resource "aws_instance" "public-instance" {
     subnet_id = var.ec2_subnet_id
     vpc_security_group_ids = [aws_security_group.public-sg.id]
     key_name = var.key_name
+    user_data = file("${path.module}/script.sh")
     tags={
         Name = var.instance_name
     }
