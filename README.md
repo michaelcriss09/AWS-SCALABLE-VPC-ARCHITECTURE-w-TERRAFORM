@@ -31,21 +31,33 @@ Since there is a constant deployment of the same AWS resources, this terraform p
    export AWS_SECRET_ACCESS_KEY="wJalrXUtnFEMI/K7MDENG/xxxxxxx"
 
   # Usage
-1) Initialize the Terraform directory:  
+1) Create a key pairs on aws and download it
+2) Open `terraform.tfvars` file and paste key pairs name here:
+   ```bash
+   key_name = "PASTE-YOUR-KEY-NAME-HERE"
+  
+3) Open `script.sh` located in `/modules/ec2-module/public-instances` 
+4) Paste key pairs content here and modify your key_name in the route with the name of your key pairs:
+   ```bash
+   echo "PASTE YOUR .PEM CONTENT HERE"> /home/ubuntu/key_name.pem 
+
+Finally Save!
+
+5) Initialize the Terraform directory:  
    ```bash
    terraform init
-2) Generate the execution plan and apply to run:  
+6) Generate the execution plan and apply to run:  
    ```bash
    terraform plan 
    terraform apply
 
   AWS architecture is up!
 
-3) Connect to `Bastion-host-Instance` on aws EC2 panel if you don't know how to SSH from your terminal
-5) SSH to server `App01-server-instance` and `App02-server-instance` instances from `Bastion-host-Instance`
-7) Test Internet access
-8) Finally check your `target group` Health from your server instances
-9) Once finished, rember delete aws resources to avoid charges:
+7) Connect to `Bastion-host-Instance` on aws EC2 panel if you don't know how to SSH from your terminal
+8) SSH to server `App01-server-instance` and `App02-server-instance` instances from `Bastion-host-Instance`
+9) Test Internet access 
+10) Finally check your `target group` Health from your server instances
+11) Once finished, rember delete aws resources to avoid charges:
      ```bash
    terraform destroy
 
